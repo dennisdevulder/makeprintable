@@ -1,4 +1,5 @@
 require File.expand_path('../client/endpoints.rb', __FILE__)
+require File.expand_path('../client/jobs.rb', __FILE__)
 
 module MakePrintable
   class Client
