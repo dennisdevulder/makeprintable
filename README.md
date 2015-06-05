@@ -19,15 +19,16 @@ Or install it yourself as:
 
 ## Usage
 Create a new initializer: (config/initializers/makeprintable.rb)
+
     MakePrintable.configure do |config|
       config.api_key = ENV[‘makeprintable_api_key’]
       config.api_secret = ENV[‘makeprintable_api_secret’]
     end
 
-    
+
 
 ## Methods
-For the official documentation please refer to: https://makeprintable.com/page/3/3D%20repair%20API
+For the official documentation please refer to: https://makeprintable.com/page/3/3D-repair-API
 
     # Upload a model
     client = MakePrintable::Client.new
