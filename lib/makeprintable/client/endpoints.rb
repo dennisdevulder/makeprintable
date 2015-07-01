@@ -1,7 +1,7 @@
 module MakePrintable
   class Client
     def base_uri(path='/')
-      "http://api.makeprintable.com" + path
+      "https://api.makeprintable.com/v1#{path}"
     end
 
     def configure_payload(path, opts={})
@@ -9,11 +9,11 @@ module MakePrintable
     end
 
     def get_request(uri)
-      JSON.parse RestClient.get(uri, {}, key: self.api_key)
+      JSON.parse RestClient.get(uri, {})
     end
 
     def post_request(path, opts)
-      JSON.parse RestClient.post(base_uri(path), opts, key: self.api_key)
+      Crack::XML.parse RestClient.post(base_uri(path), opts, key: self.api_key)
     end
 
     def delete_request(uri)
