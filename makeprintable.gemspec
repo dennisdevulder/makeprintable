@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version       = MakePrintable::VERSION
   spec.authors       = ["Dennis de Vulder"]
   spec.email         = ["dennisdevulder@gmail.com"]
-  spec.description   = %q{}
+  spec.description   = %q{Ruby wrapper providing a connection to the makeprintable API the rails way}
   spec.summary       = %q{Ruby wrapper for detecting flaws in 3D designs and repairing them for 3D printing. Using the makeprintable API.}
   spec.homepage      = "http://rubygems.org/gems/makeprintable"
   spec.license       = "MIT"
@@ -17,8 +17,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "rake"
-  spec.add_dependency "rspec"
-  spec.add_dependency 'rest-client'
-  spec.add_dependency 'crack'
+  spec.add_dependency "rake", '= 10.4.2'
+  spec.add_dependency "rspec", '= 3.2.0'
+  spec.add_dependency 'rest-client', '=1.8.0'
+  spec.add_dependency 'crack', '= 0.4.2'
 end
