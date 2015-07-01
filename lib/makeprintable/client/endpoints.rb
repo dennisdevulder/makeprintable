@@ -9,15 +9,27 @@ module MakePrintable
     end
 
     def get_request(uri)
-      Crack::XML.parse RestClient::Request.execute(method: :get, url: uri, headers: {key: self.api_key})
+      begin
+        Crack::XML.parse RestClient::Request.execute(method: :get, url: uri, headers: {key: self.api_key})
+      rescue => e
+        Crack::XML.parse e.response
+      end
     end
 
     def post_request(path, opts)
-      Crack::XML.parse RestClient.post(base_uri(path), opts, key: self.api_key)
+      begin
+        Crack::XML.parse RestClient.post(base_uri(path), opts, key: self.api_key)
+      rescue => e
+        Crack::XML.parse e.response
+      end
     end
 
     def delete_request(uri)
-      Crack::XML.parse RestClient::Request.execute(method: :delete, url: uri, headers: {key: self.api_key})
+      begin
+        Crack::XML.parse RestClient::Request.execute(method: :delete, url: uri, headers: {key: self.api_key})
+      rescue => e
+        Crack::XML.parse e.response
+      end
     end
   end
 end
