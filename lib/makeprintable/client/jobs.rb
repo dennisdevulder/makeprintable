@@ -13,7 +13,12 @@ module MakePrintable
 
     # Delete a specific item from server.
     def delete_item(id)
-      delete_request configure_payload("/item/#{id}")
+      delete_request configure_payload("/items/#{id}")
+    end
+
+    # Return a list of previously uploaded models
+    def items
+      get_request configure_payload('/items')
     end
 
     # Repairs an uploaded item
