@@ -9,7 +9,7 @@ module MakePrintable
     end
 
     def get_request(uri)
-      JSON.parse RestClient.get(uri, {})
+      Crack::XML.parse RestClient::Request.execute(method: :get, url: uri, headers: {key: self.api_key})
     end
 
     def post_request(path, opts)
@@ -17,7 +17,7 @@ module MakePrintable
     end
 
     def delete_request(uri)
-      JSON.parse RestClient.delete(uri, {}, key: self.api_key)
+      Crack::XML.parse RestClient::Request.execute(method: :delete, url: uri, headers: {key: self.api_key})
     end
   end
 end
