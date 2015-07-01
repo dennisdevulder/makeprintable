@@ -6,11 +6,6 @@ module MakePrintable
       post_request '/items', opts
     end
 
-    # Return a list of previously uploaded items
-    def items
-      get_request configure_payload("/items")
-    end
-
     # Return specific item information
     def find_item(id)
       get_request configure_payload("/items/#{id}")
