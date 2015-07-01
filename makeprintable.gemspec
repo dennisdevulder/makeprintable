@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rake"
   spec.add_dependency "rspec"
   spec.add_dependency 'rest-client'
+  spec.add_dependency 'crack'
 end
