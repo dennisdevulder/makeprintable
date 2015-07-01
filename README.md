@@ -7,7 +7,7 @@ Sign up for your api credentials at: https://makeprintable.com/site/login
 
 Add this line to your application's Gemfile:
 
-    gem ‘makeprintable’
+    gem ‘makeprintable’, '~> 1.0.0'
 
 And then execute:
 
@@ -22,7 +22,6 @@ Create a new initializer: (config/initializers/makeprintable.rb)
 
     MakePrintable.configure do |config|
       config.api_key = ENV[‘makeprintable_api_key’]
-      config.api_secret = ENV[‘makeprintable_api_secret’]
     end
 
 
@@ -41,10 +40,6 @@ For the official documentation please refer to: https://makeprintable.com/page/3
     # Return specific item information
     client = MakePrintable::Client.new
     client.find_item(item_id)
-
-    # Delete a specific item from server.
-    client = MakePrintable::Client.new
-    client.delete_item(item_id)
 
     # Delete a specific item from server.
     client = MakePrintable::Client.new
