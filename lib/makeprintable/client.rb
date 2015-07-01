@@ -3,10 +3,10 @@ require File.expand_path('../client/jobs.rb', __FILE__)
 
 module MakePrintable
   class Client
-    attr_accessor :api_key, :api_secret
+    attr_accessor :api_key
 
     def initialize
-      @api_key, @api_secret = [MakePrintable.configuration.api_key, MakePrintable.configuration.api_secret]
+      @api_key = MakePrintable.configuration.api_key
     end
   end
 end
