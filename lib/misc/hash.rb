@@ -7,6 +7,6 @@ class Hash
   end
 
   def to_params
-    '&'+collect{|k, v| v.to_query(k)}.sort * '&'
+    collect{|k, v| v.to_query(k)}.sort * '&'
   end
 end
