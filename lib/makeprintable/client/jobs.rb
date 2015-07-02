@@ -23,7 +23,7 @@ module MakePrintable
 
     # Repairs an uploaded item
     def repair(opts={})
-      opts.assert_valid_keys(:item_id, :callback_url, :name, :wall_thickness, :print_quality, :pre_optimize, :post_optimize)
+      opts.assert_valid_keys(:item_id, :callback_url, :name, :wall_thickness, :print_quality, :pre_optimize, :post_optimize, :secure)
       post_request '/fixes', opts
     end
 

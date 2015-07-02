@@ -7,7 +7,7 @@ Sign up for your api credentials at: https://makeprintable.com/site/login
 
 Add this line to your application's Gemfile:
 
-    gem ‘makeprintable’, '~> 1.0.0'
+    gem ‘makeprintable’, '~> 1.0.1'
 
 And then execute:
 
@@ -47,7 +47,7 @@ For the official documentation please refer to: https://makeprintable.com/page/3
 
     # Repair an uploaded item
     client = MakePrintable::Client.new
-    client.repair(item_id: item_id, callback_url: ‘optional_url’, name: ‘model_name’, wall_thickness: 1, print_quality: [‘standard’, ‘prototype’, ‘high’], pre_optimize: [0,99], post_optimize: [0,99])
+    client.repair(item_id: item_id, callback_url: ‘optional_url’, name: ‘model_name’, wall_thickness: 1, print_quality: [‘standard’, ‘prototype’, ‘high’], pre_optimize: [0,99], post_optimize: [0,99], secure: [0|1])
 
     # Returns repair information for a specific repair request, including status, progress and download links.
     client = MakePrintable::Client.new
