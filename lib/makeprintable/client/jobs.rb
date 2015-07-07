@@ -2,7 +2,7 @@ module MakePrintable
   class Client
     # Upload a model to fix it later
     def upload(opts={})
-      opts.assert_valid_keys(:file)
+      opts.assert_valid_keys(:file, :fileurl)
       post_request '/items', opts
     end
 
