@@ -7,7 +7,7 @@ Sign up for your api credentials at: https://makeprintable.com/site/login
 
 Add this line to your application's Gemfile:
 
-    gem ‘makeprintable’, '~> 1.0.1'
+    gem ‘makeprintable’, '~> 1.0.2'
 
 And then execute:
 
@@ -29,9 +29,13 @@ Create a new initializer: (config/initializers/makeprintable.rb)
 ## Methods
 For the official documentation please refer to: https://makeprintable.com/page/3/3D-repair-API
 
-    # Upload a model
+    # Upload a model from local source
     client = MakePrintable::Client.new
     client.upload(file: File.open(‘path_to_file’))
+
+    # Upload a model from remote URL
+    client = MakePrintable::Client.new
+    client.upload(fileurl: 'remote_url')
 
     # Return a list of previously uploaded files.
     client = MakePrintable::Client.new
