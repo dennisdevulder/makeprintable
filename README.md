@@ -27,7 +27,7 @@ Create a new initializer: (config/initializers/makeprintable.rb)
 
 
 ## Methods
-For the official documentation please refer to: https://makeprintable.com/page/3/3D-repair-API
+For the official documentation please refer to: http://blog.makeprintable.com/category/api-v1/
 
     # Upload a model from local source
     client = MakePrintable::Client.new
